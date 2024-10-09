@@ -69,19 +69,17 @@ const clientRoutes = require("./routes/client")
 app.use(clientRoutes.router)
 
 
-
-
 //error handler //express error middleware
 app.use((err,req,res,next)=>{
      console.log(err)
     err.statusCode = err.statusCode || 300
     err.message = err.message 
-    res.status(err.statusCode).render("home",)
+    res.status(err.statusCode).render("index",)
 })
 
 
 
-app.listen(process.env.PORT||8080,(err)=>{
+app.listen(process.env.PORT||8081,(err)=>{
    console.log(err)
     console.log("sucessfully")
 })

@@ -370,8 +370,8 @@
 
 
     <script>var appID = "Phoenix";</script>
-  
-    
+
+
     <div class="global--navigation" id="g-navigation">
         <a tabindex="-1" name="skipallnav" id="skipallnav" href="#endnav" class="hidden-skip">Skip all category
             navigation links</a>
@@ -1669,7 +1669,7 @@ max-height: 400px;
     </style>
 
 
-    
+
     <style>
         /* Basic Reset */
 
@@ -1804,20 +1804,143 @@ max-height: 400px;
 
 
 
-    <div class="tracking-container">
-        <!-- Header Section -->
-        <div class="header">
-            <h1>USPS Tracking®</h1>
-            <div class="tracking-info">
-                <span>Tracking Number:</span>
-                <span id="tracking-number">9405830216760303318863</span>
-                <button id="copy-button" class="button--primary" style="width:100%">Copy</button>
-            </div>
-        </div>
 
 
 
-        <script>
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container Styling */
+        .tracking-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f7fa;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        /* General Card Styling */
+        .card {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 22px;
+            color: #333366;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .card h3 i {
+            margin-right: 10px;
+            color: #333366;
+        }
+
+        .card-content {
+            padding: 10px 0;
+        }
+
+        .card-content p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .card-content p strong {
+            color: #333;
+        }
+
+        .status {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Tracking Header Card */
+        .tracking-header h2 {
+            font-size: 28px;
+            color: #333366;
+            text-align: center;
+        }
+
+        #tracking-number {
+            font-size: 18px;
+            color: #555;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Google Map Card */
+        .map-card .map-container {
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .map {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .tracking-container {
+                padding: 15px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            #tracking-number {
+                font-size: 16px;
+            }
+        }
+    </style>
+
+
+
+
+
+    <script>
             document.getElementById('copy-button').addEventListener('click', function () {
                 const trackingNumber = document.getElementById('tracking-number').innerText;
                 navigator.clipboard.writeText(trackingNumber).then(() => {
@@ -1829,43 +1952,120 @@ max-height: 400px;
         </script>
 
 
-        <!-- Latest Update Section -->
-        <div class="latest-update">
-            <h2>Latest Update</h2>
-            <p>Your item arrived at our OAKLAND CA DISTRIBUTION CENTER origin facility on September 19, 2024, at 7:49
-                pm. The item is currently in transit to the destination.</p>
-        </div>
 
-        <!-- Tracking History -->
-        <div class="tracking-history">
-            <ul class="timeline">
+
+        <div class="tracking-container">
+    <!-- Header Section -->
+    <div class="header">
+        <div class="tracking-info">
+            <span>Tracking Number:</span>
+            <span id="tracking-number"><%= trackingData[0]._id %></span> <!-- Using the tracking ID here -->
+            <button id="copy-button" class="button--primary" style="width:100%">Copy</button>
+        </div>
+    </div>
+
+    <!-- Latest Update Section -->
+    <div class="latest-update">
+        <h2>Latest Update</h2>
+        <p>Your item arrived at our <%= trackingData[0].location %> origin facility on <%= trackingData[0].depature_time %>. The item is currently <%= trackingData[0].inTransit.status %> to the destination.</p>
+    </div>
+
+    <!-- Tracking History -->
+    <div class="tracking-history">
+        <ul class="timeline">
+            <% if (trackingData[0].delivered.active) { %>
                 <li class="delivered">Delivered</li>
+            <% } %>
+            <% if (trackingData[0].outForDelivery.active) { %>
                 <li class="out-for-delivery">Out for Delivery</li>
+            <% } %>
+            <% if (trackingData[0].preparingForDelivery.active) { %>
                 <li class="preparing">Preparing for Delivery</li>
+            <% } %>
+            <% if (trackingData[0].inTransit.active) { %>
                 <li class="in-transit active">
-                    <span>In Transit from Origin Processing</span>
-                    <span>Arrived at USPS Regional Origin Facility</span>
-                    <span>OAKLAND CA DISTRIBUTION CENTER</span>
-                    <span>September 19, 2024, 7:49 pm</span>
+                    <span><%= trackingData[0].inTransit.status %> from Origin Processing</span>
+                    <span>Arrived at <%= trackingData[0].location %></span>
+                    <span><%= trackingData[0].location %></span>
+                    <span><%= trackingData[0].inTransit.timestamp %></span>
                 </li>
+            <% } %>
+            <% if (trackingData[0].pickedUp.active) { %>
                 <li class="picked-up">
                     <span>USPS picked up item</span>
-                    <span>EMERYVILLE, CA 94608</span>
-                    <span>September 19, 2024, 2:27 pm</span>
+                    <span><%= trackingData[0].pickedUp.location || 'N/A' %></span>
+                    <span><%= trackingData[0].pickedUp.timestamp || 'N/A' %></span>
                 </li>
-            </ul>
-        </div>
+            <% } %>
+        </ul>
+    </div>
 
+    <!-- Shipper Information Card -->
+    <div class="card">
+        <h3><i class="fas fa-user-circle"></i> Shipper Information</h3>
+        <div class="card-content">
+            <p><strong>Name:</strong> <%= trackingData[0].shipper_name %></p>
+            <p><strong>Phone:</strong> <%= trackingData[0].shipper_phoneNumber %></p>
+            <p><strong>Address:</strong> <%= trackingData[0].shipper_address %></p>
+            <p><strong>Email:</strong> <%= trackingData[0].shipper_email %></p>
+        </div>
+    </div>
+
+    <!-- Receiver Information Card -->
+    <div class="card">
+        <h3><i class="fas fa-user-circle"></i> Receiver Information</h3>
+        <div class="card-content">
+            <p><strong>Name:</strong> <%= trackingData[0].reciever_name %></p>
+            <p><strong>Phone:</strong> <%= trackingData[0].reciever_phoneNumber %></p>
+            <p><strong>Address:</strong> <%= trackingData[0].reciever_address %></p>
+            <p><strong>Email:</strong> <%= trackingData[0].reciever_email %></p>
+        </div>
+    </div>
+
+    <!-- Shipment Information Card -->
+    <div class="card">
+        <h3><i class="fas fa-box"></i> Shipment Information</h3>
+        <div class="card-content">
+            <p><strong>Type of Shipment:</strong> <%= trackingData[0].piece_type %></p>
+            <p><strong>Weight:</strong> <%= trackingData[0].weight %> kg</p>
+            <p><strong>Carrier:</strong> <%= trackingData[0].carrier %></p>
+            <p><strong>Mode:</strong> <%= trackingData[0].mode %></p>
+            <p><strong>Status:</strong> <span class="status"><%= trackingData[0].inTransit.status %></span></p>
+        </div>
+    </div>
+
+    <!-- Package Details Card -->
+    <div class="card">
+        <h3><i class="fas fa-cube"></i> Package Details</h3>
+        <div class="card-content">
+            <p><strong>Product:</strong> <%= trackingData[0].product %></p>
+            <p><strong>Quantity:</strong> <%= trackingData[0].quantity %></p>
+            <p><strong>Dimensions:</strong> <%= trackingData[0].length %> x <%= trackingData[0].width %> x <%= trackingData[0].height %> cm</p>
+            <p><strong>Total Freight:</strong> <%= trackingData[0].total_freight %> USD</p>
+        </div>
+    </div>
+
+    <!-- Delivery Information Card -->
+    <div class="card">
+        <h3><i class="fas fa-calendar-alt"></i> Delivery Information</h3>
+        <div class="card-content">
+            <p><strong>Pickup Date:</strong> <%= trackingData[0].pickup_date %></p>
+            <p><strong>Expected Delivery Date:</strong> <%= trackingData[0].expected_delivery_date %></p>
+            <p><strong>Courier Reference No:</strong> <%= trackingData[0].courier_Reference_No %></p>
+        </div>
+    </div>
+
+    <!-- Google Map Card -->
+    <div class="card map-card">
+        <h3><i class="fas fa-map-marker-alt"></i> Delivery Location</h3>
         <div class="map-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509814!2d-122.2711!3d37.8049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f8c8ccdd3bd81%3A0x9a95f7f4aa474c1b!2sOakland%2C%20CA%2094607!5e0!3m2!1sen!2sus!4v1684400759293!5m2!1sen!2sus"
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509814!2d-122.2711!3d37.8049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808f8c8ccdd3bd81%3A0x9a95f7f4aa474c1b!2sOakland%2C%20CA%2094607!5e0!3m2!1sen!2sus!4v1684400759293!5m2!1sen!2sus"
                 allowfullscreen class="map"></iframe>
         </div>
+    </div>
 
-        <!-- Footer -->
-        <div class="footer">
-            <a href="#">Get More Out of USPS Tracking: USPS Tracking Plus®</a>
-        </div>
+   
+</div>
 
 
         <div class="clearfix"></div>
