@@ -20,7 +20,7 @@ John Doe
 456 North Street
 Anycity, VA 20020
 
-For information on special U.S. addresses, visit https://www.usps.com/ship/letters.htm and read Step 2: Address Your Mail
+For information on special U.S. addresses, visit ship/letters.htm and read Step 2: Address Your Mail
 
 Step 3: Apply your postage: For standard envelopes weighing 1 oz or less, you can use a Forever(R) stamp. Put the stamp in the top right corner of the front of the envelope (the side where you wrote the address).
 
@@ -28,12 +28,12 @@ For standard-sized postcards, you can use a less expensive postcard stamp. Put t
 
 (Standard-sized postcards are between 5 inches long by 3-1/2 inches high and 6 inches long by 4-1/4 inches high.)
 
-For other sizes, weights, and services (like insurance or certified mail), visit https://postcalc.usps.com and use our Retail Postage Price Calculator tool to determine the cost.
+For other sizes, weights, and services (like insurance or certified mail), visit  and use our Retail Postage Price Calculator tool to determine the cost.
 
-Stamps can be purchased at a variety of locations, including your local Post Office(TM) branch, or online at https://www.usps.com/stamps
+Stamps can be purchased at a variety of locations, including your local Post Office(TM) branch, or online at stamps
 
 Step 4: Send your letter or postcard: You can leave your outgoing mail in your mailbox (raising the flag if you have one), or drop it in a blue collection box (opening the door on the top front of the box and placing your letter inside), or take it to your local Post Office branch.
 
 End of video content.
 
-Copyright 2021 United States Postal Service. All Rights Reserved. The Eagle Logo is among the many trademarks of the U.S. Postal Service. Privacy Notice: For information regarding our privacy policies, visit https://www.usps.com/privacypolicy
+Copyright 2021 United States Postal Service. All Rights Reserved. The Eagle Logo is among the many trademarks of the U.S. Postal Service. Privacy Notice: For information regarding our privacy policies, visit privacypolicy

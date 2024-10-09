@@ -1,18 +1,17 @@
-const express = require("express")
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
 
-let gethome = require("../controller/client").gethome
-let track = require("../controller/client").track
-let trackResult = require("../controller/client").trackResult
-let services = require("../controller/client").services
+let gethome = require("../controller/client").gethome;
+let trackResult = require("../controller/client").trackResult;
 
-router.get('/', gethome)
-router.get('/track',track)
-router.post('/track',trackResult)
-router.get('/services',services)
+// Define the routes
+router.get('/', gethome);
+router.post('/', trackResult);
 
+// Catch-all route for undefined routes (redirect to root)
+router.all('*', (req, res) => {
+    res.redirect('/');
+});
 
+exports.router = router;
 
-
-
-exports.router = router

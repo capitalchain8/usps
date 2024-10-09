@@ -39,21 +39,21 @@ if (document.location.pathname.indexOf("pfsLocal-P_PFSLocal")!=-1) {
 /* When logged out of Informed Delivery application user will be redirected to static Informed Delivery page - 10-26 
 */
 if (document.location.hostname.indexOf("informeddelivery./")!=-1) {
-	currentPage="https://www.//manage/informed-delivery.htm";
-	currentPageIn="https://www.//manage/informed-delivery.htm";  
+	currentPage="/manage/informed-delivery.htm";
+	currentPageIn="/manage/informed-delivery.htm";  
 }
 /* When logged out of Informed Delivery static landing page user will be redirected to static Informed Delivery page - 10 -26 
 */
 if (document.location.pathname.indexOf("/manage/informed-delivery.htm")!=-1) {
-	currentPage="https://www.//manage/informed-delivery.htm";
-	currentPageIn="https://www.//manage/informed-delivery.htm";  
+	currentPage="/manage/informed-delivery.htm";
+	currentPageIn="/manage/informed-delivery.htm";  
 }
 
 /* When logged out of Informed Delivery application from enroll page user will be redirected to static Informed Delivery page - 10 -26 */
 
 if  (document.location.pathname.indexOf("/manage/informed-delivery-enroll.htm")!=-1) {
-	currentPage="https://www.//manage/informed-delivery.htm";
-	currentPageIn="https://www.//manage/informed-delivery.htm";
+	currentPage="/manage/informed-delivery.htm";
+	currentPageIn="/manage/informed-delivery.htm";
 }
 /*
 if (document.location.hostname.indexOf("informeddelivery")!=-1) {
@@ -61,12 +61,12 @@ if (document.location.hostname.indexOf("informeddelivery")!=-1) {
 	currentPageIn=document.location.origin;
 }
 if (document.location.pathname.indexOf("informeddelivery")!=-1) {
-	currentPage="https://informeddelivery./";
-	currentPageIn="https://informeddelivery./";
+	currentPage="";
+	currentPageIn="";
 }*/
 if (document.location.hostname.indexOf("eddm./")!=-1) {
-	currentPage="https://eddm.//eddm/";
-	currentPageIn="https://eddm.//eddm/";
+	currentPage="/eddm/";
+	currentPageIn="/eddm/";
 }
 
 // Clean URL
@@ -274,4 +274,4 @@ if (isUserLoggedIn) {
 }
 
 // Search Client Hostname
-var search_client_hostname = "https://about./";
+var search_client_hostname = "";

@@ -303,7 +303,7 @@ if (isUserLoggedIn) {
 }
 
 // Search Client Hostname
-var search_client_hostname = "https://about./";
+var search_client_hostname = "";
 if ((document.location.hostname.indexOf("intpx") != -1) || (document.location.hostname.indexOf("tusps") != -1) || (document.location.hostname.indexOf("dusps") != -1)) {
 	search_client_hostname = "https://sitpx-about./";
 }

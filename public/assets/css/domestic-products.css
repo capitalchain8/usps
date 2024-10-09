@@ -298,7 +298,7 @@ p a.button--primary, p a.button--secondary {
 :not(.faq-section) h3 a:after {
     content: "";
     display: inline-block;
-    background-image: url(https://www.usps.com/assets/images/home/text-link-carat-red.svg);
+    background-image: url(assets/images/home/text-link-carat-red.svg);
     background-repeat: no-repeat;
     margin-left: -25px;
     position: relative;
