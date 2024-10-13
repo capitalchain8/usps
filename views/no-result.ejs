@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 
 <head>
     <script src="../www.googleoptimize.com/optimize20ac.js?id=GTM-T35N9RL"></script>
@@ -67,45 +65,6 @@
             }
         }
 
-        /* alert styles start */
-        /*    
-
-.hidden-galert {
-   position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
-@media (max-width: 958px) {
-	.g-alert p br { 
-		display:none;
-		}
-		
-	.g-alert+.g-alert {
-	  margin-top: 0;
-	}
-
-	.g-alert p {
-		line-height:18px;
-	}	
-}
-
-@media (min-width: 958px) {
-	.g-alert p {
-		padding: 0px 5px;
-	}
-}
-
-
-.g-alert + .g-alert {margin-top:  5px;}
-
- 
-   */
-
-        /* end alert styles */
 
 
         /* adding the Print Customs Forms image */
@@ -127,10 +86,245 @@
 
         /* Ending Business Search Bar Spacing */
     </style>
-    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
+        body {
+            margin: 0;
+            font-family: "HelveticaNeueW02-55Roma", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f0f4f8;
+            /* Light background for better contrast */
+            color: #333;
+            /* Darker text color for better readability */
+        }
 
+        .tracking-container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            /* White background for the container */
+            max-width: 1200px;
+            border-radius: 8px;
+            /* Rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Soft shadow for depth */
+        }
 
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #d1d1d1;
+            padding-bottom: 10px;
+        }
+
+        .header h1 {
+            color: #0033cc;
+            font-size: 28px;
+            flex: 1 100%;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow for depth */
+        }
+
+        .tracking-info {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            flex: 1 100%;
+        }
+
+        .tracking-info span,
+        .tracking-info button {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #0033cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            /* Increased padding for buttons */
+            cursor: pointer;
+            border-radius: 5px;
+            /* Slightly rounded buttons */
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s;
+            /* Smooth transition */
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            /* Darker shade on hover */
+            transform: translateY(-2px);
+            /* Lift effect on hover */
+        }
+
+        .latest-update {
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+            /* Gradient background */
+            border: 1px solid #b2ebf2;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            /* Soft shadow */
+        }
+
+        .latest-update p {
+            font-size: 16px;
+            margin: 0;
+            /* Reset margin for consistent spacing */
+        }
+
+        .timeline {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .timeline li {
+            padding: 10px;
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #ccc;
+            margin-bottom: 10px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            /* Smooth background transition */
+        }
+
+        .timeline li:hover {
+            background-color: #f1f8ff;
+            /* Light highlight on hover */
+        }
+
+        .timeline li.active {
+            border-color: #0033cc;
+        }
+
+        .timeline li::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+        }
+
+        .timeline li.active::before {
+            background-color: #0033cc;
+            border-color: #0033cc;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .footer a {
+            color: #0033cc;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+            /* Underline on hover */
+        }
+
+        .map-container {
+            margin-top: 40px;
+            /* Space above the map */
+        }
+
+        .map {
+            width: 100%;
+            height: 500px;
+            /* Increased height for the map */
+            border: 0;
+            /* No border */
+            border-radius: 8px;
+            /* Rounded corners for the map */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            /* Shadow for depth */
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .tracking-container {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .tracking-info {
+                justify-content: flex-start;
+            }
+
+            .tracking-info span,
+            .tracking-info button {
+                margin-right: 0;
+            }
+
+            .latest-update p {
+                font-size: 16px;
+                /* Ensured consistent font size */
+            }
+
+            .timeline li {
+                font-size: 16px;
+                /* Ensured consistent font size */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+
+            .tracking-info,
+            .header h1 {
+                text-align: center;
+                width: 100%;
+            }
+
+            .tracking-info {
+                flex-direction: column;
+            }
+
+            .tracking-info button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .latest-update {
+                font-size: 14px;
+                /* Increased font size for smaller screens */
+                padding: 15px;
+                /* Adjusted padding for smaller screens */
+            }
+
+            .timeline li {
+                font-size: 14px;
+                /* Increased timeline text size for smaller screens */
+            }
+
+            .footer {
+                font-size: 14px;
+                /* Increased footer text size for smaller screens */
+            }
+        }
+    </style>
 
     <script>var appID = "Phoenix";</script>
 
@@ -340,7 +534,7 @@
                                             alt="Mail and Ship image with call to action." /></a></div>
                             </ul>
 
-                            <form method="get" class="search global-header--search" tabindex="-1" action="/">
+                            <form method="get" class="search global-header--search" tabindex="-1" action="/search">
                                 <span aria-hidden="false" tabindex="-1" class="input--wrap">
                                     <label tabindex="-1" class="visuallyhidden"
                                         for="global-header--search-track-mail-ship">Search /</label>
@@ -807,12 +1001,6 @@
             <a name="endnav" id="endnav" href="#" class="hidden-skip">&nbsp;</a>
         </div>
     </div>
-
-
-
-
-
-
 
     <script type="text/javascript" src="global-elements/footer/script/jquery-3.7.1.js"></script>
     <script>Modernizr = { svg: 'true', touch: 'true' }</script>
@@ -1439,7 +1627,6 @@ max-height: 400px;
             }
         }
     </style>
-
     <style>
         .alert-p img {
             display: inline-block;
@@ -1487,8 +1674,6 @@ max-height: 400px;
             }
         }
     </style>
-
-
 
     <style>
         /* Basic Reset */
@@ -1623,631 +1808,176 @@ max-height: 400px;
     </style>
 
 
+
+
+    <div class="container">
+        <h1>Tracking Information Not Available</h1>
+        <p>We couldn't find a product associated with the tracking number you provided. Please try again below.</p>
+
+        <div class="search-bar">
+            <form id="tracking-form" action="/">
+                <input type="text" id="tracking-input" placeholder="Enter your tracking number" />
+                <button class="button--primary" type="submit">Track Again</button>
+            </form>
+        </div>
+
+        <div class="contact-support">
+            <p>Need help? <a href="#">Contact our support team</a></p>
+        </div>
+    </div>
+
+
+
     <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Container Styling */
-        .tracking-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f7fa;
-            font-family: 'Helvetica Neue', sans-serif;
-        }
-
-        /* General Card Styling */
-        .card {
+       
+        /* Body and Container Styling */
+        .container {
+            text-align: center;
             background-color: #fff;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            animation: fadeIn 0.5s ease-in-out;
         }
 
-        .card:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .card h3 {
-            font-size: 22px;
+        /* Heading */
+        h1 {
+            font-size: 28px;
             color: #333366;
-            display: flex;
-            align-items: center;
             margin-bottom: 15px;
         }
 
-        .card h3 i {
-            margin-right: 10px;
-            color: #333366;
-        }
-
-        .card-content {
-            padding: 10px 0;
-        }
-
-        .card-content p {
+        /* Message Text */
+        p {
             font-size: 16px;
-            color: #555;
-            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
         }
 
-        .card-content p strong {
-            color: #333;
+        /* Search Bar Styling */
+        .search-bar {
+            margin: 20px 0;
+            width: 100%;
+            /* Ensure the search bar takes full width */
         }
 
-        _status {
-            color: #28a745;
+        #tracking-form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        #tracking-input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .button--primary {
+            background-color: #333366;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            /* Full width button */
+        }
+
+        .button--primary:hover {
+            background-color: #444499;
+        }
+
+        /* Contact Support Section */
+        .contact-support {
+            margin-top: 20px;
+        }
+
+        .contact-support a {
+            color: #333366;
+            text-decoration: none;
             font-weight: bold;
         }
 
-        /* Tracking Header Card */
-        .tracking-header h2 {
-            font-size: 28px;
-            color: #333366;
-            text-align: center;
+        .contact-support a:hover {
+            text-decoration: underline;
         }
 
-        #tracking-number {
-            font-size: 18px;
-            color: #555;
-            display: block;
-            text-align: center;
-            margin-top: 10px;
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
-        /* Google Map Card */
-        .map-card .map-container {
-            height: 300px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .map {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Responsive Layout */
+        /* Responsive Design for Small Screens */
         @media (max-width: 768px) {
-            .tracking-container {
-                padding: 15px;
+            .container {
+                padding: 30px;
             }
 
-            .card {
-                padding: 15px;
-            }
-
-            h3 {
-                font-size: 20px;
+            h1 {
+                font-size: 24px;
             }
 
             p {
                 font-size: 14px;
             }
 
-            #tracking-number {
-                font-size: 16px;
-            }
-        }
-    </style>
-
-    <style>
-        
-    
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: "HelveticaNeueW02-55Roma", "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background-color: #f0f4f8;
-            /* Light background for better contrast */
-            color: #333;
-            /* Darker text color for better readability */
-        }
-
-        .tracking-container {
-            width: 90%;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            /* White background for the container */
-            max-width: 1200px;
-            border-radius: 8px;
-            /* Rounded corners */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            /* Soft shadow for depth */
-        }
-
-        .header {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 2px solid #d1d1d1;
-            padding-bottom: 10px;
-        }
-
-        .header h1 {
-            color: #0033cc;
-            font-size: 28px;
-            flex: 1 100%;
-            margin-bottom: 15px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-            /* Subtle shadow for depth */
-        }
-
-        .tracking-info {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            flex: 1 100%;
-        }
-
-        .tracking-info span,
-        .tracking-info button {
-            margin-right: 10px;
-            margin-bottom: 10px;
-        }
-
-        button {
-            background-color: #0033cc;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            /* Increased padding for buttons */
-            cursor: pointer;
-            border-radius: 5px;
-            /* Slightly rounded buttons */
-            font-size: 16px;
-            transition: background-color 0.3s ease, transform 0.2s;
-            /* Smooth transition */
-        }
-
-        button:hover {
-            background-color: #0056b3;
-            /* Darker shade on hover */
-            transform: translateY(-2px);
-            /* Lift effect on hover */
-        }
-
-        .latest-update {
-            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
-            /* Gradient background */
-            border: 1px solid #b2ebf2;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-            /* Rounded corners */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            /* Soft shadow */
-        }
-
-        .latest-update p {
-            font-size: 16px;
-            margin: 0;
-            /* Reset margin for consistent spacing */
-        }
-
-        .timeline {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .timeline li {
-            padding: 10px;
-            position: relative;
-            padding-left: 30px;
-            border-left: 2px solid #ccc;
-            margin-bottom: 10px;
-            font-size: 16px;
-            transition: background-color 0.3s;
-            /* Smooth background transition */
-        }
-
-        .timeline li:hover {
-            background-color: #f1f8ff;
-            /* Light highlight on hover */
-        }
-
-        .timeline li.active {
-            border-color: #0033cc;
-        }
-
-        .timeline li::before {
-            content: '';
-            position: absolute;
-            left: -10px;
-            top: 10px;
-            width: 20px;
-            height: 20px;
-            background-color: #fff;
-            border: 2px solid #ccc;
-            border-radius: 50%;
-        }
-
-        .timeline li.active::before {
-            background-color: #0033cc;
-            border-color: #0033cc;
-        }
-
-        .footer {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 16px;
-        }
-
-        .footer a {
-            color: #0033cc;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-            /* Underline on hover */
-        }
-
-        .map-container {
-            margin-top: 40px;
-            /* Space above the map */
-        }
-
-        .map {
-            width: 100%;
-            height: 500px;
-            /* Increased height for the map */
-            border: 0;
-            /* No border */
-            border-radius: 8px;
-            /* Rounded corners for the map */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            /* Shadow for depth */
-        }
-
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
-            .tracking-container {
-                width: 100%;
-                padding: 10px;
-            }
-
-            .header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .tracking-info {
-                justify-content: flex-start;
-            }
-
-            .tracking-info span,
-            .tracking-info button {
-                margin-right: 0;
-            }
-
-            .latest-update p {
-                font-size: 16px;
-                /* Ensured consistent font size */
-            }
-
-            .timeline li {
-                font-size: 16px;
-                /* Ensured consistent font size */
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-
-            .tracking-info,
-            .header h1 {
-                text-align: center;
-                width: 100%;
-            }
-
-            .tracking-info {
-                flex-direction: column;
-            }
-
-            .tracking-info button {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-
-            .latest-update {
+            #tracking-input {
+                padding: 8px;
                 font-size: 14px;
-                /* Increased font size for smaller screens */
-                padding: 15px;
-                /* Adjusted padding for smaller screens */
             }
 
-            .timeline li {
+            .button--primary {
+                padding: 10px 15px;
                 font-size: 14px;
-                /* Increased timeline text size for smaller screens */
-            }
-
-            .footer {
-                font-size: 14px;
-                /* Increased footer text size for smaller screens */
             }
         }
-        
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+                max-width: 100%;
+                /* Full width on small screens */
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 13px;
+            }
+
+            #tracking-input {
+                padding: 8px;
+                font-size: 13px;
+            }
+
+            .button--primary {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+        }
     </style>
 
 
 
 
-
-    <script>
-        document.getElementById('copy-button').addEventListener('click', function () {
-            // Get the text from the tracking number span
-            var trackingNumber = document.getElementById('tracking-number').textContent;
-
-            // Use the Clipboard API to copy the text
-            navigator.clipboard.writeText(trackingNumber).then(function () {
-                // Optionally, notify the user that the text was copied
-                alert('Tracking number copied: ' + trackingNumber);
-            }).catch(function (error) {
-                console.error('Failed to copy text: ', error);
-                alert('Failed to copy text. Please try again.');
-            });
-        });
-    </script>
-
-
-
-
-
-
-
-    <div class="tracking-container">
-        <!-- Header Section -->
-        <div class="header">
-            <div class="tracking-info">
-                <span>Tracking Number:</span>
-                <span id="tracking-number">
-                    <%= trackingData.courier_Reference_No %>
-                </span>
-                <button id="copy-button" class="button--primary" style="width:100%">Copy</button>
-            </div>
-        </div>
-
-        <!-- Latest Update Section -->
-        <div class="latest-update">
-            <h2>Latest Update</h2>
-            <p>
-                <%= trackingData.latestUpdate %>
-        </div>
-
-        <!-- Tracking History -->
-        <div class="tracking-history">
-            <ul class="timeline">
-                <li class="<%= trackingData.delivered_active ? 'active' : '' %>">
-
-                    <div>
-                        Delivered
-                    </div>
-                    <p>
-                        <% if (trackingData.delivered_active) { %>
-
-                            Your package was successfully delivered to <%= trackingData.delivered_location %> on <%=
-                                    trackingData.delivered_date %> at <%= trackingData.delivered_timestamp %>. If you
-                                        have any issues with your delivery, please don't hesitate to reach out.
-                                        <% } %>
-                    </p>
-                </li>
-                <li class="<%= trackingData.outForDelivery_active ? 'active' : '' %>">
-
-
-                    <div>
-                        Out For Delivery
-                    </div>
-                    <p>
-                        <% if (trackingData.outForDelivery_active) { %>
-
-                            The package is out for delivery and is en route to <%= trackingData.outForDelivery_location
-                                %>. You can expect delivery by <%= trackingData.outForDelivery_date %> at approximately
-                                    <%= trackingData.outForDelivery_timestamp %>.
-                                        <% } %>
-                    </p>
-                </li>
-                <li class="<%= trackingData.preparingForDelivery_active ? 'active' : '' %>">
-
-                    <div>
-                        preparing For Delivery
-                    </div>
-                    <p>
-                        <% if (trackingData.preparingForDelivery_active) { %>
-                            Your package is currently being prepared for delivery. It will be dispatched for delivery
-                            soon
-                            <% } %>
-                    </p>
-                </li>
-
-                <li class="<%= trackingData.pickedUp_active ? 'active' : '' %>">
-                    <div>
-                        picked Up
-                    </div>
-                    <p>
-                        <% if (trackingData.pickedUp_active) { %>
-                            Your package was picked up from <%= trackingData.pickedUp_location %> on <%=
-                                    trackingData.pickedUp_date %> at <%= trackingData.pickedUp_timestamp %>
-                                        <% } %>
-                    </p>
-                </li>
-
-                <li class="<%= trackingData.inTransit_active ? 'active' : '' %>">
-
-                    <div>
-                        In Transit
-                    </div>
-                    <p>
-                        <% if (trackingData.inTransit_active) { %>
-                            Your package is currently on its way, traveling through our network. Expected delivery
-                            continues on schedule.
-                            <% } %>
-                    </p>
-
-                </li>
-            </ul>
-
-
-        </div>
-
-        <!-- Shipper Information Card -->
-        <div class="card">
-            <h3><i class="fas fa-user-circle"></i> Shipper Information</h3>
-            <div class="card-content">
-                <p><strong>Name:</strong>
-                    <%= trackingData.shipper_name %>
-                </p>
-                <p><strong>Phone:</strong>
-                    <%= trackingData.shipper_phoneNumber %>
-                </p>
-                <p><strong>Address:</strong>
-                    <%= trackingData.shipper_address %>
-                </p>
-                <p><strong>Email:</strong>
-                    <%= trackingData.shipper_email %>
-                </p>
-            </div>
-        </div>
-
-        <!-- Receiver Information Card -->
-        <div class="card">
-            <h3><i class="fas fa-user-circle"></i> Receiver Information</h3>
-            <div class="card-content">
-                <p><strong>Name:</strong>
-                    <%= trackingData.reciever_name %>
-                </p>
-                <p><strong>Phone:</strong>
-                    <%= trackingData.reciever_phoneNumber %>
-                </p>
-                <p><strong>Address:</strong>
-                    <%= trackingData.reciever_address %>
-                </p>
-                <p><strong>Email:</strong>
-                    <%= trackingData.reciever_email %>
-                </p>
-            </div>
-        </div>
-
-        <!-- Shipment Information Card -->
-        <div class="card">
-            <h3><i class="fas fa-box"></i> Shipment Information</h3>
-            <div class="card-content">
-                <p><strong>Type of Shipment:</strong>
-                    <%= trackingData.piece_type %>
-                </p>
-                <p><strong>Weight:</strong>
-                    <%= trackingData.weight %> kg
-                </p>
-                <p><strong>Carrier:</strong>
-                    <%= trackingData.carrier %>
-                </p>
-                <p><strong>Mode:</strong>
-                    <%= trackingData.mode %>
-                </p>
-                <p><strong>Status:</strong> <span class="status">
-                        <%= trackingData.inTransit_status %>
-                    </span></p>
-            </div>
-        </div>
-
-        <!-- Package Details Card -->
-        <div class="card">
-            <h3><i class="fas fa-cube"></i> Package Details</h3>
-            <div class="card-content">
-                <p><strong>Product:</strong>
-                    <%= trackingData.product %>
-                </p>
-                <p><strong>Quantity:</strong>
-                    <%= trackingData.quantity %>
-                </p>
-                <p><strong>Dimensions:</strong>
-                    <%= trackingData.length %> x <%= trackingData.width %> x <%= trackingData.height %> cm
-                </p>
-                <p><strong>Total Freight:</strong>
-                    <%= trackingData.total_freight %> USD
-                </p>
-            </div>
-        </div>
-
-        <!-- Delivery Information Card -->
-        <div class="card">
-            <h3><i class="fas fa-calendar-alt"></i> Delivery Information</h3>
-            <div class="card-content">
-                <p><strong>Pickup Date:</strong>
-                    <%= trackingData.pickup_date %>
-                </p>
-                <p><strong>Expected Delivery Date:</strong>
-                    <%= trackingData.expected_delivery_date %>
-                </p>
-                <p><strong>Courier Reference No:</strong>
-                    <%= trackingData.courier_Reference_No %>
-                </p>
-            </div>
-        </div>
-
-        <!-- Google Map Card -->
-        <div class="card map-card">
-            <h3><i class="fas fa-map-marker-alt"></i> Delivery Location</h3>
-            <div class="map-container">
-                <% if (trackingData.lattitude && trackingData.longitude) { %>
-                    <iframe
-                        src="https://www.google.com/maps/embed/v1/view?key=AIzaSyA6uAzElIorbUxdb1ksrkT1iogT3IZ2grc&center=<%= trackingData.lattitude %>,<%= trackingData.longitude %>&zoom=14"
-                        allowfullscreen class="map">
-                    </iframe>
-                    <% } else { %>
-                        <p>Location data is not available.</p>
-                        <% } %>
-
-
-
-
-            </div>
-        </div>
-
-
-    </div>
-
-
-
-
-
-
-    <!-- Styles for Active Highlighting -->
-    <style>
-        .tracking-history .history-trackingData {
-            margin: 10px 0;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .tracking-history .history-trackingData_active {
-            background-color: #f0f8ff;
-            font-weight: bold;
-            color: #2e59d9;
-            border-left: 4px solid #2e59d9;
-        }
-
-        .tracking-history _timestamp {
-            display: block;
-            font-size: 0.85em;
-            color: #888;
-        }
-
-        .tracking-history .history-trackingData span {
-            display: block;
-        }
-    </style>
 
 
 
