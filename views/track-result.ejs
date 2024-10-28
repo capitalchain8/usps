@@ -1488,12 +1488,8 @@ max-height: 400px;
         }
     </style>
 
-
-
     <style>
-        /* Basic Reset */
-
-
+       
         /* Header Styling */
         .header {
             background-color: #f0f2f5;
@@ -1620,126 +1616,31 @@ max-height: 400px;
                 /* Adjusted font size for span elements */
             }
         }
-    </style>
 
-
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Container Styling */
-        .tracking-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f7fa;
-            font-family: 'Helvetica Neue', sans-serif;
-        }
-
-        /* General Card Styling */
-        .card {
-            background-color: #fff;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
-        }
-
-        .card:hover {
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .card h3 {
-            font-size: 22px;
-            color: #333366;
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .card h3 i {
-            margin-right: 10px;
-            color: #333366;
-        }
-
-        .card-content {
-            padding: 10px 0;
-        }
-
-        .card-content p {
-            font-size: 16px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .card-content p strong {
-            color: #333;
-        }
-
-        _status {
-            color: #28a745;
-            font-weight: bold;
-        }
-
-        /* Tracking Header Card */
-        .tracking-header h2 {
-            font-size: 28px;
-            color: #333366;
-            text-align: center;
-        }
-
-        #tracking-number {
-            font-size: 18px;
-            color: #555;
-            display: block;
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        /* Google Map Card */
-        .map-card .map-container {
-            height: 300px;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .map {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Responsive Layout */
-        @media (max-width: 768px) {
-            .tracking-container {
-                padding: 15px;
-            }
-
-            .card {
-                padding: 15px;
-            }
-
-            h3 {
-                font-size: 20px;
-            }
-
-            p {
-                font-size: 14px;
-            }
-
-            #tracking-number {
-                font-size: 16px;
-            }
-        }
-    </style>
-
-    <style>
         
+        
+        .tracking-history .history-trackingData {
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .tracking-history .history-trackingData_active {
+            background-color: #f0f8ff;
+            font-weight: bold;
+            color: #2e59d9;
+            border-left: 4px solid #2e59d9;
+        }
+
+        .tracking-history _timestamp {
+            display: block;
+            font-size: 0.85em;
+            color: #888;
+        }
+
+        .tracking-history .history-trackingData span {
+            display: block;
+        }
     
         * {
             box-sizing: border-box;
@@ -1977,35 +1878,127 @@ max-height: 400px;
                 font-size: 14px;
                 /* Increased footer text size for smaller screens */
             }
+            }
+
+
+            
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
+
+        /* Container Styling */
+        .tracking-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f7fa;
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+
+        /* General Card Styling */
+        .card {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 22px;
+            color: #333366;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .card h3 i {
+            margin-right: 10px;
+            color: #333366;
+        }
+
+        .card-content {
+            padding: 10px 0;
+        }
+
+        .card-content p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .card-content p strong {
+            color: #333;
+        }
+
+        _status {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Tracking Header Card */
+        .tracking-header h2 {
+            font-size: 28px;
+            color: #333366;
+            text-align: center;
+        }
+
+        #tracking-number {
+            font-size: 18px;
+            color: #555;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Google Map Card */
+        .map-card .map-container {
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .map {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .tracking-container {
+                padding: 15px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            h3 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 14px;
+            }
+
+            #tracking-number {
+                font-size: 16px;
+            }
+        }
+    
         
+        
+    
     </style>
-
-
-
-
-
-    <script>
-        document.getElementById('copy-button').addEventListener('click', function () {
-            // Get the text from the tracking number span
-            var trackingNumber = document.getElementById('tracking-number').textContent;
-
-            // Use the Clipboard API to copy the text
-            navigator.clipboard.writeText(trackingNumber).then(function () {
-                // Optionally, notify the user that the text was copied
-                alert('Tracking number copied: ' + trackingNumber);
-            }).catch(function (error) {
-                console.error('Failed to copy text: ', error);
-                alert('Failed to copy text. Please try again.');
-            });
-        });
-    </script>
-
-
-
-
-
-
 
     <div class="tracking-container">
         <!-- Header Section -->
@@ -2217,43 +2210,26 @@ max-height: 400px;
 
 
     </div>
+    
+    <script>
+        document.getElementById('copy-button').addEventListener('click', function () {
+            // Get the text from the tracking number span
+            var trackingNumber = document.getElementById('tracking-number').textContent;
 
-
-
-
-
-
-    <!-- Styles for Active Highlighting -->
-    <style>
-        .tracking-history .history-trackingData {
-            margin: 10px 0;
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .tracking-history .history-trackingData_active {
-            background-color: #f0f8ff;
-            font-weight: bold;
-            color: #2e59d9;
-            border-left: 4px solid #2e59d9;
-        }
-
-        .tracking-history _timestamp {
-            display: block;
-            font-size: 0.85em;
-            color: #888;
-        }
-
-        .tracking-history .history-trackingData span {
-            display: block;
-        }
-    </style>
+            // Use the Clipboard API to copy the text
+            navigator.clipboard.writeText(trackingNumber).then(function () {
+                // Optionally, notify the user that the text was copied
+                alert('Tracking number copied: ' + trackingNumber);
+            }).catch(function (error) {
+                console.error('Failed to copy text: ', error);
+                alert('Failed to copy text. Please try again.');
+            });
+        });
+    </script>
 
 
 
     <div class="clearfix"></div>
-
-
 
     <div id="global-footer--wrap" class="global-footer--wrap">
         <link type="text/css" rel="stylesheet" href="global-elements/footer/css/main-sb.css">
