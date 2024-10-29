@@ -2048,41 +2048,67 @@ max-height: 400px;
             </div>
 
             <h2 class="latest-update-header">Latest Update</h2>
+            <style>
+                .latest-update-header {
+                    font-weight: bold;
+                    color: #555;
+                    margin: 20px 0 10px;
+                    position: relative;
+                }
 
-            <p>
+                .latest-update-header::after {
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #555;
+                    margin: 8px auto 0;
+                }
+            </style>
+
+            <div class="status-updates">
                 <% if (trackingData.inTransit_active) { %>
-                    Your package is currently on its way, traveling through our network. Expected delivery
-                    continues on schedule.
+                    <p class="status-message in-transit">
+                        🚚 Your package is currently on its way, traveling through our network. Expected delivery
+                        continues on schedule.
+                    </p>
                     <% } %>
-            </p>
-            <p>
-                <% if (trackingData.delivered_active) { %>
 
-                    Your package was successfully delivered to <%= trackingData.delivered_location %> on <%=
-                            trackingData.delivered_date %> at <%= trackingData.delivered_timestamp %>. If you
-                                have any issues with your delivery, please don't hesitate to reach out.
-                                <% } %>
-            </p>
-            <p>
-                <% if (trackingData.outForDelivery_active) { %>
+                        <% if (trackingData.delivered_active) { %>
+                            <p class="status-message delivered">
+                                📦 Your package was successfully delivered to <%= trackingData.delivered_location %> on
+                                    <%= trackingData.delivered_date %> at <%= trackingData.delivered_timestamp %>.
+                                            If you have any issues with your delivery, please don't hesitate to reach
+                                            out.
+                            </p>
+                            <% } %>
 
-                    The package is out for delivery and is en route to <%= trackingData.outForDelivery_location %>. You
-                        can expect delivery by <%= trackingData.outForDelivery_date %> at approximately
-                            <%= trackingData.outForDelivery_timestamp %>.
-                                <% } %>
-            </p>
-            <p>
-                <% if (trackingData.preparingForDelivery_active) { %>
-                    Your package is currently being prepared for delivery. It will be dispatched for delivery
-                    soon
-                    <% } %>
-            </p>
-            <p>
-                <% if (trackingData.pickedUp_active) { %>
-                    Your package was picked up from <%= trackingData.pickedUp_location %> on <%=
-                            trackingData.pickedUp_date %> at <%= trackingData.pickedUp_timestamp %>
-                                <% } %>
-            </p>
+                                <% if (trackingData.outForDelivery_active) { %>
+                                    <p class="status-message out-for-delivery">
+                                        🚚 The package is out for delivery and is en route to <%=
+                                            trackingData.outForDelivery_location %>.
+                                            Expected delivery by <%= trackingData.outForDelivery_date %> at
+                                                approximately
+                                                <%= trackingData.outForDelivery_timestamp %>.
+                                    </p>
+                                    <% } %>
+
+                                        <% if (trackingData.preparingForDelivery_active) { %>
+                                            <p class="status-message preparing-for-delivery">
+                                                🔄 Your package is currently being prepared for delivery. It will be
+                                                dispatched soon.
+                                            </p>
+                                            <% } %>
+
+                                                <% if (trackingData.pickedUp_active) { %>
+                                                    <p class="status-message picked-up">
+                                                        🏢 Your package was picked up from <%=
+                                                            trackingData.pickedUp_location %> on
+                                                            <%= trackingData.pickedUp_date %> at <%=
+                                                                    trackingData.pickedUp_timestamp %>.
+                                                    </p>
+                                                    <% } %>
+            </div>
         </div>
 
         <style>
@@ -2150,6 +2176,11 @@ max-height: 400px;
             }
             */
         </style>
+
+
+
+
+
 
 
 
@@ -2651,7 +2682,7 @@ max-height: 400px;
             })();
         </script>
         <footer class="global-footer">
-            <a href="index.html" class="global-footer--logo-link"></a>
+            
             <nav class="global-footer--navigation">
                 <ol style="display: inline;">
                     <li style="color:#333366;" class="global-footer--navigation-category">
