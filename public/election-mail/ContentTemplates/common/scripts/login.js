@@ -3,31 +3,31 @@ var isUserLoggedIn = false;
 var first;
 var profileLang;
 
-var regHost = "reg.usps.com";
+var regHost = "reg.fdic.com";
 var toolsHost = "";
-var storeHost = "store.usps.com";
+var storeHost = "store.fdic.com";
 var catStore = "";
 var lowEnv = false;
 
-if ((document.location.hostname.indexOf("intpx") != -1) || (document.location.hostname.indexOf("qusps") != -1) || (document.location.hostname.indexOf("stage") != -1)) {
+if ((document.location.hostname.indexOf("intpx") != -1) || (document.location.hostname.indexOf("qfdic") != -1) || (document.location.hostname.indexOf("stage") != -1)) {
 	// CAT
-	regHost = "catpx-custreg.usps.com";
-	toolsHost = "cat-tools.usps.com";
-	storeHost = "ecom-cat.usps.com";
+	regHost = "catpx-custreg.fdic.com";
+	toolsHost = "cat-tools.fdic.com";
+	storeHost = "ecom-cat.fdic.com";
 	catStore = "-cat";
 	lowEnv = true;
-} else if (document.location.hostname.indexOf("tusps") != -1) {
+} else if (document.location.hostname.indexOf("tfdic") != -1) {
 	// SIT
-	regHost = "sitpx-custreg.usps.com";
-	toolsHost = "sit-tools.usps.com";
-	storeHost = "ecom-sit-int.usps.com";
+	regHost = "sitpx-custreg.fdic.com";
+	toolsHost = "sit-tools.fdic.com";
+	storeHost = "ecom-sit-int.fdic.com";
 	catStore = "-sit";
 	lowEnv = true;
-} else if (document.location.hostname.indexOf("dusps") != -1) {
+} else if (document.location.hostname.indexOf("dfdic") != -1) {
 	// DEV
-	regHost = "devpx-custreg.usps.com";
-	toolsHost = "dev-tools.usps.com";
-	storeHost = "ecom-dev.usps.com";
+	regHost = "devpx-custreg.fdic.com";
+	toolsHost = "dev-tools.fdic.com";
+	storeHost = "ecom-dev.fdic.com";
 	catStore = "-dev";
 	lowEnv = true;
 }
@@ -51,7 +51,7 @@ function cleanURL(x) {
 
 // Cookie Functions
 function createMyCookie(name,value) {
-	document.cookie = name+"="+value+"; path=/; domain=.usps.com";
+	document.cookie = name+"="+value+"; path=/; domain=.fdic.com";
 }
 
 function readMyCookie(name) {
@@ -203,7 +203,7 @@ loginAnchor_Onclick+
 '			</form>'+
 		  '</div>'+
 		  '<div id="login-detail" class="fontStyle9">'+
-			'<strong>Create a USPS.com account to...</strong>'+
+			'<strong>Create a fdic.com account to...</strong>'+
 			'<ul>'+
 			  '<li>print shipping labels'+
 			  '</li>'+
@@ -215,7 +215,7 @@ loginAnchor_Onclick+
 			  '</li>'+
 			  '<li>file insurance claims'+
 			  '</li>'+
-				'<li><span style="line-height: 15px;">and manage home deliveries <span style="padding-left: 15px;">with My USPS</span></span></li></ul><p></p><a id="sign-up-link" href="https://'+regHost+'/entreg/RegistrationAction_input?app=Phoenix&amp;appURL='+currentPage+'" name="sign-up-link" '+
+				'<li><span style="line-height: 15px;">and manage home deliveries <span style="padding-left: 15px;">with My fdic</span></span></li></ul><p></p><a id="sign-up-link" href="https://'+regHost+'/entreg/RegistrationAction_input?app=Phoenix&amp;appURL='+currentPage+'" name="sign-up-link" '+
        loginSignup_Onclick+
        '>Sign Up Now &rsaquo;</a>'+
 		  '</div>'+
@@ -238,7 +238,7 @@ var loggedInUser = 	'<div class="nav-pipe"></div><div id="nav-tool-login" class=
 									'<div>'+
 										'<p>'+first+',</p>'+
 										'<ul class="fontStyle9">'+
-											'Thanks for registering for an account. Get started using USPS.com by shopping or shipping.'+
+											'Thanks for registering for an account. Get started using fdic.com by shopping or shipping.'+
 										'</ul>'+
 									'</div>'+
 									'<div id="accountLinks" class="cta fontStyle7 clearfix">'+
@@ -304,6 +304,6 @@ if (isUserLoggedIn) {
 
 // Search Client Hostname
 var search_client_hostname = "";
-if ((document.location.hostname.indexOf("intpx") != -1) || (document.location.hostname.indexOf("tusps") != -1) || (document.location.hostname.indexOf("dusps") != -1)) {
-	search_client_hostname = "https://sitpx-about.usps.com";
+if ((document.location.hostname.indexOf("intpx") != -1) || (document.location.hostname.indexOf("tfdic") != -1) || (document.location.hostname.indexOf("dfdic") != -1)) {
+	search_client_hostname = "https://sitpx-about.fdic.com";
 }

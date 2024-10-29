@@ -1,5 +1,5 @@
 //
-// OneLink() method for USPS site.  Coded for staging and live sites.
+// OneLink() method for fdic site.  Coded for staging and live sites.
 //
 // History:
 //    arivard   ::  10-Aug-2011  :: created
@@ -37,7 +37,7 @@ function OneLink (sLanguage, /*optional*/sHostname)
 			// they are going to English from a translated site:
 			if (sHostname.match (/onelink-translations.com/)) {
 				kDebug ("translated staging site, trying to go back to english");
-				sRedirectTo = sHostname.slice(3,sHostname.indexOf("-usps")) + ".usps.com";
+				sRedirectTo = sHostname.slice(3,sHostname.indexOf("-fdic")) + ".fdic.com";
 				kDebug (sRedirectTo);
 			}
 			else {
@@ -50,7 +50,7 @@ function OneLink (sLanguage, /*optional*/sHostname)
 			sRedirectTo = sLanguage + "-" + sRedirectTo; // <-- add new language prefix
 		}
 	}
-	else if (sHostname == "es.usps.com") // exception to generic rule
+	else if (sHostname == "es.fdic.com") // exception to generic rule
 	{
 		switch (sLanguage)
 		{
@@ -58,37 +58,37 @@ function OneLink (sLanguage, /*optional*/sHostname)
 			kDebug ('NO-OP: we are already on: ' + sLanguage);
 			return;
 		case "zh":
-			sRedirectTo = "zh.usps.com";
+			sRedirectTo = "zh.fdic.com";
 			break;
 		default:
-			sRedirectTo = "www.usps.com";
+			sRedirectTo = "www.fdic.com";
 			break;
 		}
 	}
-	else if (sHostname == "zh.usps.com") // exception to generic rule
+	else if (sHostname == "zh.fdic.com") // exception to generic rule
 	{
 		switch (sLanguage)
 		{
 		case "es":
-			sRedirectTo = "es.usps.com";
+			sRedirectTo = "es.fdic.com";
 			break;
 		case "zh":
 			kDebug ('NO-OP: we are already on: ' + sLanguage);
 			return;
 		default:
-			sRedirectTo = "www.usps.com";
+			sRedirectTo = "www.fdic.com";
 			break;
 		}
 	}
-	else if (sHostname == "www.usps.com") // exception to generic rule
+	else if (sHostname == "www.fdic.com") // exception to generic rule
 	{
 		switch (sLanguage)
 		{
 		case "es":
-			sRedirectTo = "es.usps.com";
+			sRedirectTo = "es.fdic.com";
 			break;
 		case "zh":
-			sRedirectTo = "zh.usps.com";
+			sRedirectTo = "zh.fdic.com";
 			break;
 		default:
 			kDebug ('NO-OP: we are already on: ' + sLanguage);
@@ -107,12 +107,12 @@ function OneLink (sLanguage, /*optional*/sHostname)
 	}
 	
 	kDebug ("redir to [" + sRedirectTo + "]");
-	if ((sRedirectTo == "es-informeddelivery.usps.com")||(sRedirectTo == "zh-informeddelivery.usps.com")){
-		document.location.href = document.location.protocol + "//" + "informeddelivery.usps.com" + document.location.pathname + document.location.search;	
+	if ((sRedirectTo == "es-informeddelivery.fdic.com")||(sRedirectTo == "zh-informeddelivery.fdic.com")){
+		document.location.href = document.location.protocol + "//" + "informeddelivery.fdic.com" + document.location.pathname + document.location.search;	
 	}
 	// bring the user to the SAME PAGE on the other domain (including the query string):
 	document.location.href = document.location.protocol + "//" + sRedirectTo + document.location.pathname + document.location.search;
   // 04/25/2019 - updated to remove language specific informed delivery
 
-} // OneLink -- USPS Version
+} // OneLink -- fdic Version
 

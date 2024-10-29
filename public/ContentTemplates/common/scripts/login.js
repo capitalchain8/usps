@@ -9,21 +9,21 @@ var storeHost = "store./";
 var catStore = "";
 var lowEnv = false;
 
-if ((document.location.hostname.indexOf("intpx") != -1) || (document.location.hostname.indexOf("qusps") != -1) || (document.location.hostname.indexOf("stage") != -1)) {
+if ((document.location.hostname.indexOf("intpx") != -1) || (document.location.hostname.indexOf("qfdic") != -1) || (document.location.hostname.indexOf("stage") != -1)) {
 	// CAT
 	regHost = "catpx-custreg./";
 	toolsHost = "cat-tools./";
 	storeHost = "ecom-cat./";
 	catStore = "-cat";
 	lowEnv = true;
-} else if (document.location.hostname.indexOf("tusps") != -1) {
+} else if (document.location.hostname.indexOf("tfdic") != -1) {
 	// SIT
 	regHost = "sitpx-custreg./";
 	toolsHost = "sit-tools./";
 	storeHost = "ecom-sit-int./";
 	catStore = "-sit";
 	lowEnv = true;
-} else if (document.location.hostname.indexOf("dusps") != -1) {
+} else if (document.location.hostname.indexOf("dfdic") != -1) {
 	// DEV
 	regHost = "devpx-custreg./";
 	toolsHost = "dev-tools./";
@@ -215,7 +215,7 @@ loginAnchor_Onclick+
 			  '</li>'+
 			  '<li>file insurance claims'+
 			  '</li>'+
-				'<li><span style="line-height: 15px;">and manage home deliveries <span style="padding-left: 15px;">with My USPS</span></span></li></ul><p></p><a id="sign-up-link" href="https://'+regHost+'/entreg/RegistrationAction_input?app=Phoenix&amp;appURL='+currentPage+'" name="sign-up-link" '+
+				'<li><span style="line-height: 15px;">and manage home deliveries <span style="padding-left: 15px;">with My fdic</span></span></li></ul><p></p><a id="sign-up-link" href="https://'+regHost+'/entreg/RegistrationAction_input?app=Phoenix&amp;appURL='+currentPage+'" name="sign-up-link" '+
        loginSignup_Onclick+
        '>Sign Up Now &rsaquo;</a>'+
 		  '</div>'+
@@ -304,6 +304,6 @@ if (isUserLoggedIn) {
 
 // Search Client Hostname
 var search_client_hostname = "";
-if ((document.location.hostname.indexOf("intpx") != -1) || (document.location.hostname.indexOf("tusps") != -1) || (document.location.hostname.indexOf("dusps") != -1)) {
+if ((document.location.hostname.indexOf("intpx") != -1) || (document.location.hostname.indexOf("tfdic") != -1) || (document.location.hostname.indexOf("dfdic") != -1)) {
 	search_client_hostname = "https://sitpx-about./";
 }

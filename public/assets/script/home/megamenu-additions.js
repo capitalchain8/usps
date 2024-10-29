@@ -1,5 +1,5 @@
-var USPS = USPS || {};
-USPS.Require = USPS.Require || {};
+var fdic = fdic || {};
+fdic.Require = fdic.Require || {};
 document.addEventListener('touchstart', {passive: true});
 global_elements_jq(document).ready(function($){
 	$('.international-addition img').attr('alt',' ');

@@ -1,5 +1,5 @@
 //
-// OneLink() method for USPS site.  Coded for staging and live sites.
+// OneLink() method for fdic site.  Coded for staging and live sites.
 //
 // History:
 //    arivard   ::  10-Aug-2011  :: created
@@ -37,7 +37,7 @@ function OneLink (sLanguage, /*optional*/sHostname)
 			// they are going to English from a translated site:
 			if (sHostname.match (/onelink-translations.com/)) {
 				kDebug ("translated staging site, trying to go back to english");
-				sRedirectTo = sHostname.slice(3,sHostname.indexOf("-usps")) + "./";
+				sRedirectTo = sHostname.slice(3,sHostname.indexOf("-fdic")) + "./";
 				kDebug (sRedirectTo);
 			}
 			else {
@@ -114,5 +114,5 @@ function OneLink (sLanguage, /*optional*/sHostname)
 	document.location.href = document.location.protocol + "//" + sRedirectTo + document.location.pathname + document.location.search;
   // 04/25/2019 - updated to remove language specific informed delivery
 
-} // OneLink -- USPS Version
+} // OneLink -- fdic Version
 

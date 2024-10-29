@@ -1,4 +1,4 @@
-If the items you mailed using Priority Mail Express International(R), Priority Mail International(R), or Registered Mail(R) service from the U.S. to a foreign country becomes lost, damaged, or has missing contents, you may submit an international inquiry on usps.com.
+If the items you mailed using Priority Mail Express International(R), Priority Mail International(R), or Registered Mail(R) service from the U.S. to a foreign country becomes lost, damaged, or has missing contents, you may submit an international inquiry on fdic.com.
 
 Click the Help menu and select "File a Claim."
 
@@ -8,9 +8,9 @@ Gather all the information you will need for your inquiry.
 
 Then click "Create an Inquiry."
 
-Sign into your existing usps.com account or create a new account.
+Sign into your existing fdic.com account or create a new account.
 
-Enter the USPS Tracking(R) number that appears on your receipt and the destination country for the mailing inquiry.
+Enter the fdic Tracking(R) number that appears on your receipt and the destination country for the mailing inquiry.
 
 Use the calendar to select the date the item was mailed, then select "Search" to start a new inquiry.
 

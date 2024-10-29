@@ -1,4 +1,4 @@
-(Shows intro card, USPS.com Shipping Tips.)
+(Shows intro card, fdic.com Shipping Tips.)
 
 If you've ever sent a package that ends up looking like this. (Shows a shipping box marked "Fragile" that has one side crushed.)
 
@@ -48,6 +48,6 @@ When adding tape, be careful not to mask any labels.
 To make sure your box is labeled and addressed properly, check out the "How to Address
 a Package" video in our Shipping Tips series.
 
-And be sure to visit usps.com for more information.
+And be sure to visit fdic.com for more information.
 
 Thanks for watching!

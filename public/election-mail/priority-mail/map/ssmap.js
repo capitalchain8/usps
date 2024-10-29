@@ -54,13 +54,13 @@ function init(){
 		opacity: 0.5
 	});
 	//dynamic map
-    var psseLayerURL = "https://ssmap.usps.com/arcgis/rest/services/ServiceStandards/PMAP_Projected/MapServer";
+    var psseLayerURL = "https://ssmap.fdic.com/arcgis/rest/services/ServiceStandards/PMAP_Projected/MapServer";
     var psseLayer = new esri.layers.ArcGISDynamicMapServiceLayer(psseLayerURL, {
           id: "psseLayer",
 		  opacity: 1.0	
     });
 	//blue color layer
-	var blueLayerUrl = "https://ssmap.usps.com/arcgis/rest/services/ServiceStandards/PMAP_ProjectedColor/MapServer";
+	var blueLayerUrl = "https://ssmap.fdic.com/arcgis/rest/services/ServiceStandards/PMAP_ProjectedColor/MapServer";
   	var blueLayer = esri.layers.ArcGISDynamicMapServiceLayer(blueLayerUrl, { 
         id: "blueLayer",
 		opacity: 1.0		
@@ -129,7 +129,7 @@ function execute(originationzip){
 	
 	esri.show(dojo.byId("loadingImg"));
 	
-	gp = new esri.tasks.Geoprocessor("https://ssmap.usps.com/arcgis/rest/services/ServiceStandards/getStandardsMap2/GPServer/getStandardsMap");
+	gp = new esri.tasks.Geoprocessor("https://ssmap.fdic.com/arcgis/rest/services/ServiceStandards/getStandardsMap2/GPServer/getStandardsMap");
 	
     gp.setOutputSpatialReference({
         wkid: 102100
@@ -205,7 +205,7 @@ function createPrintableButtonArea() {
 
 function addPinLabel(origzip3) {
 	//build query
-	var queryTask3 = new esri.tasks.QueryTask("https://ssmap.usps.com/arcgis/rest/services/ServiceStandards/ZIP3_Labels2/MapServer/0");
+	var queryTask3 = new esri.tasks.QueryTask("https://ssmap.fdic.com/arcgis/rest/services/ServiceStandards/ZIP3_Labels2/MapServer/0");
 	//build query filter
    	var query3 = new esri.tasks.Query();
 	query3.where = "ZIP3 = '" + origzip3 + "'";

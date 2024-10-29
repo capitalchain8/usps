@@ -50,17 +50,17 @@ p .button--primary {
 	font-size:32px;
 	line-height:36px;
 }
-.usps-updates {
+.fdic-updates {
 	margin-bottom:100px;
 	margin-top:20px;
 }
-.usps-updates h2 {
+.fdic-updates h2 {
 	margin-top: 0;
 	margin-bottom: 0;
 	padding-top: 0;
 	padding-bottom: 40px;
 }
-.usps-updates h3 {
+.fdic-updates h3 {
 	font-size:22px;
 	line-height:24px;
 	padding-top:10px;
@@ -68,7 +68,7 @@ p .button--primary {
 	margin-bottom:0;
 }
 
-.usps-updates p {
+.fdic-updates p {
 	font-size:16px;
 	line-height: 22px;
 	margin-top: 0;
@@ -76,7 +76,7 @@ p .button--primary {
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-.usps-updates a {
+.fdic-updates a {
 	margin-top: 0;
 	margin-bottom:0;
 	padding-top:10px;
@@ -84,10 +84,10 @@ p .button--primary {
 	text-decoration:underline;
 }
 
-.usps-updates a:hover, .usps-updates a:focus {
+.fdic-updates a:hover, .fdic-updates a:focus {
 	text-decoration:none;
 }		
-.usps-updates .button--link {
+.fdic-updates .button--link {
 	font-size: 16px;
 	line-height:18px;
 	margin-top: 0;
@@ -96,13 +96,13 @@ p .button--primary {
 	padding-bottom: 0;
 }
 
-.featured-usps h2 {
+.featured-fdic h2 {
 		font-size:32px;
 	line-height:3.25rem;
 }
 
 
-.featured-usps p {
+.featured-fdic p {
 	font-size:16px;
 	line-height: 22px;
 	margin-top: 20px;
@@ -111,14 +111,14 @@ p .button--primary {
 		margin-right:38px;
 
 }
-.featured-usps a {
+.featured-fdic a {
 	margin-top: 0;
 	margin-bottom: 0;
 	margin-left:0;	
 	margin-right:0;
 
 }
-.featured-usps sup {
+.featured-fdic sup {
 	font-size:70%;
 }
 
@@ -220,11 +220,11 @@ strong {
 	padding-top: 10px;
 }
 .quicktools .quicktools-featured .col:nth-of-type(3):after,
-.usps-updates .row .article:nth-of-type(3):after {
+.fdic-updates .row .article:nth-of-type(3):after {
 	display:none;
 }
 .premium-banner {
-	background: url(../../images/home/premium/usps_littlemo_bg.jpg) fixed top center no-repeat;
+	background: url(../../images/home/premium/fdic_littlemo_bg.jpg) fixed top center no-repeat;
 	background-size: 1280px 274px;
 	height: 274px;
 }
@@ -270,12 +270,12 @@ strong {
 }
 
 /* HOMEPAGE BOOTSTRAP 4 FEATURED */
-.featured-usps .article h2 {
+.featured-fdic .article h2 {
 	text-align: center;
 	padding-bottom:22px;
 	margin-bottom: 0;
 }
-.featured-usps h3 {
+.featured-fdic h3 {
 	position: relative;
 	display: inline-block;
 	padding: 38px;
@@ -288,7 +288,7 @@ strong {
 	margin-bottom: 18px;
 }
 
-.featured-usps h3:after {
+.featured-fdic h3:after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -302,22 +302,22 @@ strong {
 	z-index: -1;
 }
 
-.featured-usps h3.left:after {
+.featured-fdic h3.left:after {
 	width: 575px;
 	left: auto;
 	right: -200px;
 }
 
-.featured-usps .flipped h3:after {
+.featured-fdic .flipped h3:after {
 	right:-133%;
 	left:auto;
 }
 
-.featured-usps {
+.featured-fdic {
 	margin-top:125px;
 	margin-bottom:60px;
 }
-.featured-usps .row {
+.featured-fdic .row {
 	margin-bottom: 38px;
 }
 
@@ -560,11 +560,11 @@ a.button--primary:hover,a.button--primary:focus {
 	.quicktools.track-opt .quicktools-featured .col-lg-2:nth-of-type(2), .quicktools.track-opt .quicktools-featured .col-lg-2:nth-of-type(3) {
 		border-right: 1px solid #d8d8d8;
 	}
-	.container-fluid.holiday-content+.featured-usps {
+	.container-fluid.holiday-content+.featured-fdic {
 		
       margin-top: 0;
 	}
-  .usps-updates .row .article:not(:last-of-type):after {
+  .fdic-updates .row .article:not(:last-of-type):after {
       width: 1px;
       height: 100%;
       display: block;
@@ -656,27 +656,27 @@ a.button--primary:hover,a.button--primary:focus {
     .quicktools-toggle {
         display:none;!Important;
     }
-    .featured-usps {
+    .featured-fdic {
         margin-top: 100px;
         margin-bottom: 60px;
     }
 		
-	.featured-usps h2 {
+	.featured-fdic h2 {
 		font-size:28px;
 		line-height:32px;
 	}
-	.featured-usps h3 {
+	.featured-fdic h3 {
 		font-size:22px;
 		line-height:24px;
 	}
 
-	.featured-usps .article h2 {
+	.featured-fdic .article h2 {
 		padding-bottom:0;
 	}
-	.featured-usps .row {
+	.featured-fdic .row {
 		margin-bottom: 45px;
 	}
-	.featured-usps h3 {
+	.featured-fdic h3 {
 		padding-top:30px;
 		padding-bottom:10px;
 		margin-top:0;
@@ -686,19 +686,19 @@ a.button--primary:hover,a.button--primary:focus {
 		color:#333366;
 		background-color:none;
 	}
-	.featured-usps h3:after {
+	.featured-fdic h3:after {
 		display:none;
 	}
-	.featured-usps p {
+	.featured-fdic p {
 		display:block;
 		text-align:center;
 	}
-	.featured-usps .button--primary {
+	.featured-fdic .button--primary {
 		max-width: 450px;
 		margin:0 auto;
 		text-align: center;
 	}
-	.featured-usps .button--primary + .button--primary {
+	.featured-fdic .button--primary + .button--primary {
 		margin-top:10px;
 		margin-bottom:0;
 	}
@@ -722,27 +722,27 @@ a.button--primary:hover,a.button--primary:focus {
 	.carousel-control-prev {
 		left: 0;
 	}	
-	.usps-updates {
+	.fdic-updates {
 		margin-top: 115px;
 	}
-	.usps-updates .row .article:after {
+	.fdic-updates .row .article:after {
 		display:none;
 	}
-	.usps-updates h2 {
+	.fdic-updates h2 {
 		padding-bottom: 10px;
 		font-size:28px;
 		line-height:32px;
 	}
 
-	.usps-updates h3 {
+	.fdic-updates h3 {
 		padding-top:40px;
 		font-size:22px;
 		line-height:24px;
 	}
-	.usps-updates p {
+	.fdic-updates p {
 		line-height:22px;
 	}
-	.container-fluid.holiday-content+.featured-usps {
+	.container-fluid.holiday-content+.featured-fdic {
 		margin-top: 0;
 	} 
   
@@ -755,7 +755,7 @@ a.button--primary:hover,a.button--primary:focus {
 		margin-top: 80px;
 		margin-bottom:83px;
 	}
-	.usps-updates {
+	.fdic-updates {
 		margin-top: 75px;
 		margin-bottom:60px;
 		padding-right:25%;
@@ -797,7 +797,7 @@ a.button--primary:hover,a.button--primary:focus {
 		z-index: 1;
 	}
 
-	.usps-updates {
+	.fdic-updates {
 		margin-top:49px;
 	}
 	.carouselslide{
@@ -815,18 +815,18 @@ a.button--primary:hover,a.button--primary:focus {
 		margin-top: 1.25rem;
 		margin-bottom: 2rem;
 	}
-	.featured-usps h3:after {
+	.featured-fdic h3:after {
 		display:none;
 	}
-	.featured-usps .article,  {
+	.featured-fdic .article,  {
 		text-align: center;
 	}
-	.featured-usps .article h3 {
+	.featured-fdic .article h3 {
 		color:#333366;
 		display:block;
 	}
 
-	.featured-usps a {
+	.featured-fdic a {
 		display:inline-block;
 	}
 	.jumbotron.premium .article:after {
@@ -842,14 +842,14 @@ a.button--primary:hover,a.button--primary:focus {
 	.jumbotron.premium .article {
 		text-align: center;
 	}
-	.featured-usps .article {
+	.featured-fdic .article {
 		text-align: center;
 	}
-	.featured-usps .article h3 {
+	.featured-fdic .article h3 {
 		padding: 0;
 		margin-bottom:0;
 	}
-	.usps-updates .article {
+	.fdic-updates .article {
 		margin-bottom: 20px;
 	}
     .jumbotron.premium {
@@ -908,23 +908,23 @@ a.button--primary:hover,a.button--primary:focus {
     .quicktools-toggle {
         display:none;!Important;
     }
-    .featured-usps {
+    .featured-fdic {
         margin-top: 50px;
         margin-bottom: 0px;
     }
-	.featured-usps img {
+	.featured-fdic img {
 		max-width: 100%;
 	}
-	.featured-usps .article h2 {
+	.featured-fdic .article h2 {
 		padding-bottom:45px;
 	}
-	.featured-usps .row {
+	.featured-fdic .row {
 		margin-bottom: 40px;
 	}
-	.featured-usps .row.title-case {
+	.featured-fdic .row.title-case {
 		margin-bottom:0;
 	}
-	.featured-usps h3 {
+	.featured-fdic h3 {
 		padding-top:0;
 		padding-bottom:5px;
 		margin-top:22px;
@@ -934,10 +934,10 @@ a.button--primary:hover,a.button--primary:focus {
 		color:#333366;
 		background-color:none;
 	}
-	.featured-usps h3:after {
+	.featured-fdic h3:after {
 		display:none;
 	}
-	.featured-usps p {
+	.featured-fdic p {
 		display:block;
 		text-align:center;
 		overflow:hidden;
@@ -948,7 +948,7 @@ a.button--primary:hover,a.button--primary:focus {
 		margin-right:0;
 		
 	}
-	.featured-usps .button--primary {
+	.featured-fdic .button--primary {
 		max-width: 100%;
 		text-align: center;
 		overflow:hidden;
@@ -957,7 +957,7 @@ a.button--primary:hover,a.button--primary:focus {
 		min-width:0;
 		
 	}
-	.featured-usps .button--primary + .button--primary {
+	.featured-fdic .button--primary + .button--primary {
 		margin-top:10px;
 		margin-bottom:0;
 	}
@@ -988,10 +988,10 @@ a.button--primary:hover,a.button--primary:focus {
 		left: -10px;
 	}	
 
-	.usps-updates h2 {
+	.fdic-updates h2 {
 		padding-bottom: 10px;
 	}
-	.usps-updates h3 {
+	.fdic-updates h3 {
 		padding-top:30px;
 	}
 	
@@ -1128,7 +1128,7 @@ a.button--primary:hover,a.button--primary:focus {
 				}
 			}
 			@media screen and (min-width: 991px){
-			.container-fluid.holiday-content+.featured-usps {
+			.container-fluid.holiday-content+.featured-fdic {
 				margin-top: 0;
 			}
 

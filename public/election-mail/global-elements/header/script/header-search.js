@@ -1,8 +1,8 @@
-var USPSGlobals = USPSGlobals || {};
-USPSGlobals.Require = USPSGlobals.Require || {}, USPSGlobals.Require.requireGlobals = USPSRequireNS.require.config({
+var fdicGlobals = fdicGlobals || {};
+fdicGlobals.Require = fdicGlobals.Require || {}, fdicGlobals.Require.requireGlobals = fdicRequireNS.require.config({
     baseUrl: "/global-elements/lib/script",
     context: "global"
-}), USPSGlobals.Require.requireHeader = USPSRequireNS.require.config({
+}), fdicGlobals.Require.requireHeader = fdicRequireNS.require.config({
     baseUrl: "/global-elements/header/script/",
     context: "header",
     paths: {
@@ -11,7 +11,7 @@ USPSGlobals.Require = USPSGlobals.Require || {}, USPSGlobals.Require.requireGlob
         helpers: "/global-elements/lib/script/helpers"
     },
     waitSeconds: 30
-}), USPSGlobals.Require.requireHeader(["require", "require-jquery", "helpers","search-fe"], function(e, t, n, r) {
+}), fdicGlobals.Require.requireHeader(["require", "require-jquery", "helpers","search-fe"], function(e, t, n, r) {
     var i = function() {
         var t = function() {};
         t()

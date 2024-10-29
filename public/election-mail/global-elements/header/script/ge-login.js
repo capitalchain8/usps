@@ -3,11 +3,11 @@ var isUserLoggedIn = false;
 var first;
 var profileLang;
 
-var regHost = "reg.usps.com";
-var toolsHost = "tools.usps.com";
-var storeHost = "store.usps.com";
+var regHost = "reg.fdic.com";
+var toolsHost = "tools.fdic.com";
+var storeHost = "store.fdic.com";
 var catStore = "";
-var pfslHost = "pfsl.usps.com"
+var pfslHost = "pfsl.fdic.com"
 var lowEnv = false;
 
 // Get current URL
@@ -38,7 +38,7 @@ if (document.location.pathname.indexOf("pfsLocal-P_PFSLocal")!=-1) {
 }
 /* When logged out of Informed Delivery application user will be redirected to static Informed Delivery page - 10-26 
 */
-if (document.location.hostname.indexOf("informeddelivery.usps.com")!=-1) {
+if (document.location.hostname.indexOf("informeddelivery.fdic.com")!=-1) {
 	currentPage="/manage/informed-delivery.htm";
 	currentPageIn="/manage/informed-delivery.htm";  
 }
@@ -64,7 +64,7 @@ if (document.location.pathname.indexOf("informeddelivery")!=-1) {
 	currentPage="/";
 	currentPageIn="/";
 }*/
-if (document.location.hostname.indexOf("eddm.usps.com")!=-1) {
+if (document.location.hostname.indexOf("eddm.fdic.com")!=-1) {
 	currentPage="/eddm/";
 	currentPageIn="/eddm/";
 }
@@ -94,7 +94,7 @@ function prepURL(x) {
 
 // Cookie Functions
 function createMyCookie(name,value) {
-	document.cookie = name+"="+value+"; path=/; domain=.usps.com";
+	document.cookie = name+"="+value+"; path=/; domain=.fdic.com";
 }
 
 function readMyCookie(name) {
@@ -203,7 +203,7 @@ var loggedInUser = 	'<div class="nav-pipe"></div><div id="nav-tool-login" class=
 									'<div>'+
 										'<p>'+cleanURL(first)+',</p>'+
 										'<ul class="fontStyle9">'+
-											'Thanks for registering for an account. Get started using USPS.com by shopping or shipping.'+
+											'Thanks for registering for an account. Get started using fdic.com by shopping or shipping.'+
 										'</ul>'+
 									'</div>'+
 									'<div id="accountLinks" class="cta fontStyle7 clearfix">'+

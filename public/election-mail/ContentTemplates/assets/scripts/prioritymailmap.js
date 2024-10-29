@@ -1,6 +1,6 @@
-var USPS = {};
+var fdic = {};
 
-USPS.PMmap = (function() {
+fdic.PMmap = (function() {
     
     var 
         elements = {};
@@ -65,5 +65,5 @@ USPS.PMmap = (function() {
 })();
 
 dojo.addOnLoad(function() {
-    USPS.PMmap.start();
+    fdic.PMmap.start();
 });
