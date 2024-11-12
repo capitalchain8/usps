@@ -12,7 +12,9 @@ module.exports.gethome = async (req, res, next) => {
 }
 
 
-
+Cossignment.find().then(data=>{
+   console.log(data)
+})
 
 module.exports.trackResult = async (req, res, next) => {
    const { keyword } = req.body

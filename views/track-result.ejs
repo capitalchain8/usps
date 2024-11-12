@@ -2071,6 +2071,7 @@ max-height: 400px;
                     <p class="status-message in-transit">
                         🚚 Your package is currently on its way, traveling through our network. Expected delivery
                         continues on schedule.
+                        Current location: <%= trackingData.inTransit_location %>
                     </p>
                     <% } %>
 
@@ -2682,7 +2683,7 @@ max-height: 400px;
             })();
         </script>
         <footer class="global-footer">
-            
+
             <nav class="global-footer--navigation">
                 <ol style="display: inline;">
                     <li style="color:#333366;" class="global-footer--navigation-category">
