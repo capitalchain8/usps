@@ -2249,8 +2249,9 @@ max-height: 400px;
                     </div>
                     <p>
                         <% if (trackingData.inTransit_active) { %>
-                            Your package is currently on its way, traveling through our network. Expected delivery
-                            continues on schedule.
+                            🚚 Your package is currently on its way, traveling through our network. Expected delivery
+                        continues on schedule.
+                        Current location: <%= trackingData.inTransit_location %>
                             <% } %>
                     </p>
 
