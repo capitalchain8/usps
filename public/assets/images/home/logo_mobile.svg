@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 300 100" style="background-color:#333366;" xml:space="preserve">
+<style type="text/css">
+    .st0{fill:#FFFFFF;}
+</style>
+
+<!-- Background Rectangle -->
+<rect width="100%" height="100%" fill="#333366"/>
+
+<!-- Letter F -->
+<g>
+    <rect x="20" y="20" width="20" height="60" class="st0"/>
+    <rect x="20" y="20" width="50" height="12" class="st0"/>
+    <rect x="20" y="45" width="35" height="10" class="st0"/>
+</g>
+
+<!-- Letter D -->
+<g>
+    <rect x="100" y="20" width="20" height="60" class="st0"/>
+    <path class="st0" d="M120,20 h35 c15,0 25,12 25,30 s-10,30 -25,30 h-35 V20 z"/>
+</g>
+
+<!-- Letter I -->
+<g>
+    <rect x="180" y="20" width="20" height="60" class="st0"/>
+</g>
+
+<!-- Letter C -->
+<g>
+    <path class="st0" d="M240,20 h-35 c-15,0 -25,12 -25,30 s10,30 25,30 h35 v-12 h-33 c-6,0 -10-6 -10-18 s4-18 10-18 h33 V20 z"/>
+</g>
+</svg>
+
+
+
+
+

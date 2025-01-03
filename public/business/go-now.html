@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<!-- Mirrored from www.fdic.com/business/go-now.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Oct 2024 01:33:13 GMT -->
+<HEAD>
+<!-- Send users to the new location. -->
+<META HTTP-EQUIV="refresh" CONTENT="0;URL=../smallbusiness/welcome.html">
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<META name='robots' content='noindex,follow'>
+<TITLE>Small Business | fdic</TITLE>
+</HEAD>
+
+<BODY>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll("a").forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        const url = link.getAttribute("href");
+
+        // Check if the link is external (starts with http or https)
+        if (url.startsWith("http://") || url.startsWith("https://")) {
+          // Allow external links to open normally
+          return;
+        } else {
+          // If the link is internal but undefined, redirect to root
+          // Check if the route exists on the server using a fetch request
+          fetch(url, { method: 'HEAD' })
+            .then(function(response) {
+              if (!response.ok) {
+                // If the route is not found, redirect to the root
+                window.location.href = "/";
+                event.preventDefault();
+              }
+            })
+            .catch(function() {
+              // If there's an error, also redirect to the root
+              window.location.href = "/";
+              event.preventDefault();
+            });
+        }
+      });
+    });
+  });
+</script>
+<script src="//code.jivosite.com/widget/So0BALiTlO" async></script>
+</body>
+
+<!-- Mirrored from www.fdic.com/business/go-now.htm by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 03 Oct 2024 01:33:15 GMT -->
+</HTML>
